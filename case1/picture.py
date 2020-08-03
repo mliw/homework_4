@@ -1,5 +1,4 @@
 import numpy as np
-import pandas as pd
 import seaborn as sns
 WEIGHTS = np.array([0.6,0.4])
 
