@@ -17,8 +17,8 @@ def asset_at_T(T,correlation):
     stock_bond = WEIGHTS*asset
     for i in range(T):
         return_rate = generate_single_return_rate(rho=correlation)
-        stock_bond = stock_bond*(return_rate+1) #Allocation of 60/40
-        stock_bond = sum(stock_bond)*WEIGHTS
+        stock_bond = stock_bond*(return_rate+1) 
+        stock_bond = sum(stock_bond)*WEIGHTS #Allocation of 60/40
     return sum(stock_bond)
     
 
@@ -56,6 +56,7 @@ def draw_pic_and_cal(correlation,name):
     plt.legend(["rho is "+str(correlation)+" mean is {}".format(mean_2)+" std is {}".format(std_2)])
     plt.savefig("pic/positive_correlation_"+name,dpi=400)
     plt.close()
+    
     
 if __name__=="__main__":
     
